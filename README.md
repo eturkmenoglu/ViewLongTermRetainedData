@@ -94,7 +94,7 @@ MIT License or as applicable to your internal deployment model.
 
 Here is how the outcome looks like inside the Case form:
 
-![ViewLongTermRetainedData](images/LTR_Viewer.png)
+![ViewLongTermRetainedData](images/LTR_Email_Viewer.png)
 
 > _This screenshot shows retained email records with subject, sender info, and a download link for attachments inside a Canvas App._
 
