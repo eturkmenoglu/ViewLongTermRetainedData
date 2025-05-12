@@ -55,6 +55,8 @@ A Power Automate flow executes a `FetchXML` query with the special `datasource="
   </entity>
 </fetch>
 
-### In the end, here is how the solution looks like, 
+'''
+
+### In the end, here is how the solution looks like,
 
 ![ViewLongTermRetainedData](images/retained-emails-viewer.png)
