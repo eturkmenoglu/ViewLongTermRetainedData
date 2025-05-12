@@ -1,5 +1,8 @@
 # 📂 Long-Term Retained Emails Viewer for Power Apps (Case Form Extension)
+> ⚠️ **DISCLAIMER:**  
+> **This is a sample app intended to demonstrate Microsoft Power Platform capabilities. It is not designed for production use. The implementation may contain potential unseen issues or errors. Please test thoroughly and adapt as needed before considering it for any production environment.**
 
+---
 ## Overview
 
 This project is a **solution accelerator** designed to enhance the user experience for enterprise business users and audit teams who need to access **archived emails and their attachments** within a **Dataverse Case form** using **Power Apps**.
