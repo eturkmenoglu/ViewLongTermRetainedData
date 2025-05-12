@@ -30,7 +30,7 @@ This accelerator introduces a **Canvas Power App** embedded in the Case form tha
 
 ## ⚙️ How It Works
 
-### 1. Power Automate Integration
+### Power Automate Integration
 
 A Power Automate flow executes a `FetchXML` query with the special `datasource="retained"` flag to retrieve archived email records.
 
@@ -54,3 +54,7 @@ A Power Automate flow executes a `FetchXML` query with the special `datasource="
     </filter>
   </entity>
 </fetch>
+
+### In the end, here is how the solution looks like, 
+
+![ViewLongTermRetainedData](images/retained-emails-viewer.png)
