@@ -28,11 +28,80 @@ This accelerator introduces a **Canvas Power App** embedded in the Case form tha
 
 ---
 
-## ⚙️ How It Works
+## 📌 How the Solution Works End-to-End
 
-### Power Automate Integration
+Here’s a step-by-step breakdown of how everything fits together:
 
-A Power Automate flow executes a `FetchXML` query with the special `datasource="retained"` flag to retrieve archived email records.
+1. **LTR Archival**  
+   Emails older than a configured retention period are removed from the live `email` table and moved to Azure Blob Storage by Microsoft's Long Term Retention policy.
+
+2. **Fetch Archived Data**  
+   Power Automate flows are used to query archived records using the special `datasource="retained"` flag (in FetchXML), allowing retrieval of emails tied to a specific Case ID.
+
+3. **Display in Power App**  
+   The data is presented in a Canvas App embedded inside the Case form, enabling contextual and user-friendly access to archived emails.
+
+4. **Download Attachments**  
+   Attachments and inline images are retrieved and made downloadable using the [Canvas File Downloader PCF control](https://pcf.gallery/canvas-file-downloader/), even when stored in base64.
+
+5. **No Rehydration Needed**  
+   Users can access necessary records and files without re-importing them into active storage—preserving Dataverse capacity and compliance.
+
+---
+
+## 🔍 Key Features
+
+- Embedded directly inside the Case form for context-aware auditing.
+- Secure access to long-term retained emails and their attachments.
+- No need to restore or rehydrate archived emails into Dataverse.
+- Fully customizable for subject-based filtering, timestamp sorting, or sender scoping.
+
+---
+
+## 🚀 Future Enhancements
+
+- Role-based access controls for sensitive attachment visibility.
+- Audit logging of who viewed/downloaded archived content.
+- Expand support for other activity types (e.g., phone calls, appointments).
+
+---
+
+## 📁 Dependencies
+
+- Microsoft Dataverse with Long Term Retention enabled.
+- Power Apps (Canvas App embedded in Model-Driven App).
+- Power Automate (Cloud Flows).
+- PCF Gallery – Canvas File Downloader control.
+
+---
+
+## 🧠 Author Notes
+
+This solution is built to empower audit and support teams without compromising Dataverse storage optimization. Feel free to extend or adapt this accelerator based on your specific retention policy structure or compliance needs.
+
+---
+
+## 📝 License
+
+MIT License or as applicable to your internal deployment model.
+
+---
+
+## 🖼️ Example Output
+
+Here is how the outcome looks like inside the Case form:
+
+![Retained Emails Viewer in Case Form](images/retained-emails-viewer-sample.png)
+
+> _This screenshot shows retained email records with subject, sender info, and a download link for attachments inside a Canvas App._
+
+---
+
+### In the end, here is how the solution looks like,
+
+![ViewLongTermRetainedData](images/retained-emails-viewer.png)
+
+---
 
 #### Sample FetchXML:
 
@@ -55,8 +124,3 @@ A Power Automate flow executes a `FetchXML` query with the special `datasource="
   </entity>
 </fetch>
 
-'''
-
-### In the end, here is how the solution looks like,
-
-![ViewLongTermRetainedData](images/retained-emails-viewer.png)
