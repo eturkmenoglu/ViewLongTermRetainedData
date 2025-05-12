@@ -61,32 +61,12 @@ Here’s a step-by-step breakdown of how everything fits together:
 
 ---
 
-## 🚀 Future Enhancements
-
-- Role-based access controls for sensitive attachment visibility.
-- Audit logging of who viewed/downloaded archived content.
-- Expand support for other activity types (e.g., phone calls, appointments).
-
----
-
 ## 📁 Dependencies
 
 - Microsoft Dataverse with Long Term Retention enabled.
 - Power Apps (Canvas App embedded in Model-Driven App).
 - Power Automate (Cloud Flows).
 - PCF Gallery – Canvas File Downloader control.
-
----
-
-## 🧠 Author Notes
-
-This solution is built to empower audit and support teams without compromising Dataverse storage optimization. Feel free to extend or adapt this accelerator based on your specific retention policy structure or compliance needs.
-
----
-
-## 📝 License
-
-MIT License or as applicable to your internal deployment model.
 
 ---
 
